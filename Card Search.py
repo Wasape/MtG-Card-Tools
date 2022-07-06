@@ -76,4 +76,4 @@ print(reqCount)
 
 ## TO VIEW SPECIFIC RAW CARD DATA
 
-# print(rawCardData['Brisela, Voice of Nightmares'])
+# print(rawCardData[#####Card Name Here#####])

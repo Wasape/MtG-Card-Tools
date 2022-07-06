@@ -39,8 +39,6 @@ print(reqCount)
 # cardDict = {}
 
 # for c in list(rawCardData.keys()):
-#     if rawCardData[c][0]['types'][0] == 'Vanguard':
-#         continue
 #     try:
 #         if not rawCardData[c][0]['legalities']['vintage']:
 #             continue

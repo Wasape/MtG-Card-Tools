@@ -1,10 +1,14 @@
 import json
 import requests
 
+## WHAT ARE YOU SEARCHING
+
+searchTerm = "Angel"
+
 
 ## GET NAME SEARCH RESULTS FROM SCRYFALL IN LIST FORM
 
-api_url = "https://api.scryfall.com/cards/search?q=the+%28-is%3Adigital+-is%3Afunny+-is%3Apromo%29"
+api_url = "https://api.scryfall.com/cards/search?q="+searchTerm+"+legal%3Avintage"
 response =  requests.get(api_url)
 responseData = response.json()['data']
 
@@ -20,8 +24,8 @@ for item in responseData:
     name = item['name']
     reqResults.append(item['name'])
 
-print(len(reqResults))
-
+reqCount = len(reqResults))
+print(reqCount)
 
 
 ##READ LOCAL MTGJSON FILE AND FILTER INVALID ELEMENTS
@@ -35,15 +39,15 @@ print(len(reqResults))
 # cardDict = {}
 
 # for c in list(rawCardData.keys()):
-    # if rawCardData[c][0]['types'][0] == 'Vanguard':
-        # continue
-    # try:
-        # if rawCardData[c][0]['legalities'] == {}:
-            # continue
-    # except KeyError:
-        # continue
-    # else:
-        # cardDict[c] = c
+#     if rawCardData[c][0]['types'][0] == 'Vanguard':
+#         continue
+#     try:
+#         if not rawCardData[c][0]['legalities']['vintage']:
+#             continue
+#     except KeyError:
+#         continue
+#     else:
+#         cardDict[c] = c
 
 # cardNames = list(cardDict.keys())
 
@@ -51,23 +55,22 @@ print(len(reqResults))
 
 ## SEARCH THROUGH MODIFIED LOCAL LIST
 
-# searchTerm = 'the'
 # myResults = []
-# count = 0
+# myCount = 0
 
 # for n in cardNames:
     # if searchTerm in n.lower():
-        # results.append(n)
-        # count+=1
+        # myResults.append(n)
+        # myCount+=1
 
-# print(count)
+# print(myCount)
 
 
 
 ## COMPARE THE SEARCH RESULTS
 
-# for r in resultsList:
-    # if r not in results:
+# for r in reqResults:
+    # if r not in myResults:
         # print(r)
 
 

@@ -67,6 +67,8 @@ print(reqCount)
 
 ## COMPARE THE SEARCH RESULTS
 
+##### may need to switch the order depending on which is larger
+
 # for r in reqResults:
     # if r not in myResults:
         # print(r)

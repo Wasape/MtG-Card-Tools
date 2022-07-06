@@ -24,7 +24,7 @@ for item in responseData:
     name = item['name']
     reqResults.append(item['name'])
 
-reqCount = len(reqResults))
+reqCount = len(reqResults)
 print(reqCount)
 
 
@@ -59,7 +59,7 @@ print(reqCount)
 # myCount = 0
 
 # for n in cardNames:
-    # if searchTerm in n.lower():
+    # if searchTerm.lower() in n.lower():
         # myResults.append(n)
         # myCount+=1
 
